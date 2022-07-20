@@ -15,7 +15,7 @@
     <title>profil</title>
 </head>
 <body>
-    <header id="header">
+    <header id="header_profile">
         <nav class="nav_bar_profil">
             <div class="logo_search_bar">
                 <a href="index.html"><img class="logo" src="./css/images/logo.png" alt="logo"></a>
@@ -26,19 +26,21 @@
             </div>
             <div class="icons_bar_profils">
                 <ul class="icons_links_profil ">
-                    <li class="icon_link home_icon"><a href="index.html"><i class="fa-solid fa-house"></i>Accueil</a></li>
-                    <li class="icon_link"><a href="reseaux.html"><i class="fa-solid fa-user-group"></i><span>Reseaux</span></a></li>
-                    <li class="icon_link"><a href="emplois.html"><i class="fa-solid fa-briefcase"></i><span>Emplois</span></a></li>
-                    <li class="icon_link"><a href="messagerie.html"><i class="fa-solid fa-comment-dots"></i><span>Messagerie</span></a></li>
-                    <li class="icon_link  "><a href="notification.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a></li>
+                    <li class="icon_link home_icon"><a href="index.html"><i class="fa-solid fa-house"></i><p>Accueil</p></a></li>
+                    <li class="icon_link"><a href="reseaux.html"><i class="fa-solid fa-user-group"></i><span><p>Reseaux</p></span></a></li>
+                    <li class="icon_link"><a href="emplois.html"><i class="fa-solid fa-briefcase"></i><span><p>Emplois</p></span></a></li>
+                    <li class="icon_link"><a href="messagerie.html"><i class="fa-solid fa-comment-dots"></i><span><p>Messagerie</p></span></a></li>
+                    <li class="icon_link  "><a href="notification.html"><i class="fa-solid fa-bell"></i><span><p>Notifications</p></span></a></li>
                     <li class="icon_link me" id="profil_button">
-                        <a href="#" id="link_ckeck_pro"><img id="my_profil" src="./css/images/my photo.jpg" alt=""><span>Vous<i class="fa-solid fa-caret-down"></i></span></a>
+                        
+                        <a href="#" id="link_ckeck_pro"><img id="my_profil" src="./css/images/my photo.jpg" alt=""><span><p>Vous<i class="fa-solid fa-caret-down"></i></p></span></a>
+
                         <div class="profil_link" id="menu_profil">
                             <div class="profil_name_job">
                                 <img class="post_photo_profil" src="./css/images/my photo.jpg" alt="#">
                                 <div class="name_and_job"> 
-                                    <h2>William Paul ABAGA NDONG</h2>
-                                    <p> STUDENT || SOFTWARE ENGINEERING || FRONT END</p>
+                                    <h2>William Hortone ABAGA </h2>
+                                    <p>  FRONTEND DEVELOPER</p>
                                 </div>
                             </div>
                             <div class="see_my_profil"><a href="profil.html">Voir le profil </a></div>
@@ -63,9 +65,9 @@
 
                 <ul id="second_icons_links_nav">
                     <li class="grid_products"><a href="#"><img  class="grid_icons" src="./css/images/grid.png" alt="#">
-                        <span >Produits <i class="fa-solid fa-caret-down"></i></span></a></li>
+                        <span ><p>Produits <i class="fa-solid fa-caret-down"></i></p></span></a></li>
 
-                    <li class="new_job_plus"><a href="#"><i class="fa-solid fa-circle-plus"></i><span>Publier une offre d'emploi</span></a></li>
+                    <li class="new_job_plus"><a href="#"><i class="fa-solid fa-circle-plus"></i><span><p>Publier une offre d'emploi</p></span><span class="responsive_text_job_header">Publier une offre <br> d'emploi</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -78,11 +80,11 @@
                 <div class="online">
                     <img class="online" src="./css/images/my photo.jpg" alt="#">
                 </div>  
-                <p><span> William Paul (Hortone) ABAGA NDONG</span><br> STUDENT || SOFTWARE ENGINEERING || FRONT END</p>
+                <p><span> William Hortone ABAGA </span><br>  FRONTEND DEVELOPER</p>
             </div>
             <div class="profil_button_toggle">
-                <div class="more">Plus</div>
-                <div class="new_section"> Ajouter une section au profil </div>
+                <div class="more" id="toggle_menu_more-btn"><p>Plus</p><span>...</span></div>
+                <div class="new_section" id="toggle_menu_new-sect-btn"> Ajouter une section au profil </div>
                 <div class="my_goal_toggle">Mes objectifs</div>
             </div>  
             <!-- <div class="profil_button"></div> -->
@@ -101,13 +103,13 @@
                 <div class="personnal_info_profil">
                     <i class="fa-solid fa-pencil"></i>
                     <div class="name_and_school">
-                        <h2>William Paul (Hortone) ABAGA <br> NDONG</h2>
+                        <h2>William Hortone ABAGA </h2>
                         <p>
                             <img src="./css/images/Jiangsu_Normal_University_logo.png" alt="#">
                             <span>江苏师范大学</span> 
                         </p>
                     </div>
-                    <h4>STUDENT || SOFTWARE ENGINEERING || FRONT END</h4>
+                    <h4>FRONTEND DEVELOPER</h4>
                     <P>Xuzhou, Jiangsu, Chine <a href="#">Coorrdonnées <br> <br>925 abonnés.Plus de 500 relations</a>
                     </P>
                    <div class="profil_button">
@@ -476,38 +478,44 @@
     <!-- ----------footet profil page-- -->
     <footer class="footer_profil">
         <h6 class="title_footer">WillHortone</h6>
+       
         <div class="footer_content">
-            <ul class="footer_box">
+            <div  class="responsive_footer_box"> 
+                <ul class="footer_box">
+                    <li><a href="#">Infos</a></li>
+                    <li><a href="#">Directives de la communauté</a></li>
+                    <li><a href="#">Conditions générales et <br> confidentialité </a></li>
+                    <li><a href="#">Sales Solutions</a></li>
+                    <li><a href="#">Centre de sécurité</a></li>
+                    <p>WillHortone Corporation © 2022</p>
+                </ul>
+                <ul class="footer_box">
+                    <li><a href="#">Accessibilité</a><li>
+                    <li><a href="#">Carrières</a></li>
+                    <li><a href="#">Préférences Pubs</a></li>
+                    <li><a href="#">Mobile</a></li>
+                </ul>
+            </div>
 
-                <li><a href="#">Infos</a></li>
-                <li><a href="#">Directives de la communauté</a></li>
-                <li><a href="#">Conditions générales et <br> confidentialité </a></li>
-                <li><a href="#">Sales Solutions</a></li>
-                <li><a href="#">Centre de sécurité</a></li>
-                <p>WillHortone Corporation © 2022</p>
-            </ul>
-            <ul class="footer_box">
-                <li><a href="#">Accessibilité</a><li>
-                <li><a href="#">Carrières</a></li>
-                <li><a href="#">Préférences Pubs</a></li>
-                <li><a href="#">Mobile</a></li>
-            </ul>
-            <ul class="footer_box">
-                <li><a href="#">Talent Solutions</a></li>
-                <li><a href="#">Marketing Solutions</a></li>
-                <li><a href="#">Publicité</a></li>
-                <li><a href="#">Petites entreprises</a></li>
-            </ul>
-            <ul class="footer_box question">
-                <div class="icon_text">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <p> <a href="#">Des questions ?</a> <br> <span>Consultez notre assistance clientèle.</span></p>
-                </div>
-                <div class="icon_text">
-                    <i class="fa-solid fa-gear"></i>
-                    <p><a href="#">Gérez votre compte et votre <br> &nbsp;&nbsp;confidentialité</a> <br> <span>Accédez à vos préférences.</span></p>
-                </div>
-            </ul>
+            <div class="responsive_footer_box">
+                <ul class="footer_box">
+                    <li><a href="#">Talent Solutions</a></li>
+                    <li><a href="#">Marketing Solutions</a></li>
+                    <li><a href="#">Publicité</a></li>
+                    <li><a href="#">Petites entreprises</a></li>
+                </ul>
+                <ul class="footer_box question">
+                    <div class="icon_text">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <p> <a href="#">Des questions ?</a> <br> <span>Consultez notre assistance clientèle.</span></p>
+                    </div>
+                    <div class="icon_text">
+                        <i class="fa-solid fa-gear"></i>
+                        <p><a href="#">Gérez votre compte et votre <br> &nbsp;&nbsp;confidentialité</a> <br> <span>Accédez à vos préférences.</span></p>
+                    </div>
+                </ul>
+            </div>
+            
             <div class="choose_language">
                 <p><span>Choisir une langue</span></p>
                 <select name="" id="">
@@ -517,7 +525,7 @@
                 </select>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
        
     </footer>
     <script src="index.js"></script>
