@@ -30,7 +30,7 @@ header {
   transform: translateX(-50%);
   z-index: 1000;
   background-color: #ffffff;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
 }
 .header_box_shadow{
@@ -94,7 +94,7 @@ header {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.616);
-    /* transition: all .5s ease; */
+    transition: all .5s ease;
     z-index: 100;
 }
 .fa-magnifying-glass {
@@ -116,6 +116,7 @@ header {
   list-style-type: none;
   font-size: 0.95rem;
 }
+
 .icon_link i {
   padding-bottom: 0.3rem;
   font-size: 1.5rem;
@@ -131,6 +132,21 @@ header {
 .fa-circle-plus:hover,
 .grid_icon:hover {
   color: #000000af;
+}
+
+.after_element{
+  position: relative;
+}
+.after_element::after {
+  content: "";
+  width: 140%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  transition: all .5s ease;
 }
 .grid_product a {
   display: flex;
@@ -180,18 +196,21 @@ header {
   text-align: center;
 }
 .profil_link {
-  width: 18rem;
+  width: 17rem;
   height: auto;
-  background-color: red;
+  background-color: #fff;
   position: absolute;
-  top: -13.5rem;
+  top: 4rem;
   right: 0;
-  border-radius: 7px 7px 0 0;
-  /* display: none; */
-  transition: all 0.3s ease;
+  border-radius: 7px  0  7px 7px;
+  display: none;
+  transition:all .5s ease;
   /* position: fixed; */
-  box-shadow: 0px 1px 1px 0px #000;
+  box-shadow: 2px 0px 9px 0px rgba(0, 0, 0, 0.425);
   z-index: 2000;
+}
+.shaw_profile .profil_link {
+  display: block;
 }
 .name_and_job h2 {
   font-size: 1.3rem;
@@ -550,12 +569,11 @@ header {
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  background-color: green;
 }
 #responsive_left_box {
   display: none;
 }
-.center_containe p {
+.center_container p {
   font-family: "Inter", sans-serif;
 }
 .new_post {
@@ -851,7 +869,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .nav_bar_profil .logo_search_bar {
   flex: 1.5;
@@ -1218,6 +1236,7 @@ a {
   background-color: #ffffff;
   gap: 1%;
   position: relative;
+  margin-left: 2%;
 }
 .my_goal {
   height: 2.2rem;
@@ -3239,7 +3258,7 @@ select {
     margin-left: 2.3rem;
 } */
 
-/* =========all medias k-========= */
+/* =========all medias for the responsive design -========= */
 
 /* ======== medias for home page ======== */
 @media screen and (max-width: 1350px) {
@@ -3285,7 +3304,6 @@ select {
   .center_container {
     width: 70%;
     margin-right: 0;
-    /* background-color: red; */
   }
 }
 @media screen and (max-width: 900px) {
@@ -3317,9 +3335,7 @@ select {
   #second_icons_links_nav {
     width: auto;
   }
-  .nav_bar_profil {
-    /* justify-content: space-evenly; */
-  }
+ 
 
   .icons_links_profil {
     width: 100%;
@@ -3332,15 +3348,7 @@ select {
   .me {
     top: 0;
   }
-  /* #header{
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
 
-    }
-     */
 }
 @media screen and (max-width: 770px) {
   .icons_links_profil {
@@ -3352,7 +3360,42 @@ select {
   }
   .left_container {
     display: none;
+    position: relative;
   }
+  .favoris{
+    display: none;
+  }
+  .shaw_favorite_container.favoris {
+    display:block;
+    margin-bottom: 50px;
+  }
+  #see_more_center_responsive{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  #see_more_center_responsive a{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap :10px;
+
+  }
+  .responsive_span_not_more,
+  .fa-angle-up{
+    display: none;
+  }
+  .shaw_favorite_container .responsive_span_more,
+  .shaw_favorite_container .fa-angle-down{
+    display: none;
+  }
+  
+  .shaw_favorite_container .responsive_span_not_more,
+  .shaw_favorite_container .fa-angle-up{
+    display: block;
+  }
+  
   .center_container {
     width: 100%;
     margin: 0 auto;
@@ -3369,6 +3412,7 @@ select {
   .premium {
     align-self: flex-start;
   }
+  
 }
 @media screen and (max-width: 720px) {
   .home_page_content {
@@ -3403,7 +3447,7 @@ select {
     overflow: hidden;
 } */
 
-/* ======== medias for profile page ======== */
+
 
 /* ======== medias for notification page ======== */
 @media screen and (max-width: 1450px) {
@@ -3455,6 +3499,7 @@ select {
     right: -8px;
   }
 }
+
 @media screen and (max-width: 720px) {
   .notification_page {
     width: 95%;
@@ -3785,9 +3830,11 @@ select {
   }
 }
 @media screen and (max-width: 750px) {
-  .toggle_head {
+  .toggle_head,
+  #toggle_my_header {
     display: none;
   }
+  
   .profil_page {
     width: 80%;
   }
@@ -3831,6 +3878,17 @@ select {
   .title .double_icons {
     width: auto;
   }
+  .work_div{
+    height: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .more{
+    display: none;
+  }
+  .new_section{
+    width: 60%;
+  }
 }
 
 
@@ -3843,11 +3901,19 @@ select {
     display: flex;
 }
 .profil_link{
-    display: none;
+    /* display: none; */
 }
-.color{
+/* .color{
     width: 400px;
     height: 300px;
     margin-bottom: 20px;
     background-color: yellow;
+} */
+/* .shaw_favorite_container{
+  display: block;
+  
+} */
+
+#menu_profil{
+  z-index: 100006;
 }
