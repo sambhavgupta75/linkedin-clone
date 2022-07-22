@@ -1,41 +1,15 @@
-// const profilButton = document.getElementById('profil_button');
-// const menuProfil = document.getElementById('menu_profil');
-// const lineDiv = document.getElementById('center_line');
-// const menuLine = document.querySelector(".line_menu_toggle");
+
 const headerBar = document.getElementById('toggle_my_header'); 
-// const header = document.querySelector('header');
-// const body = document.body;
-// const theInput = document.querySelector('.search_bar_input');
-
-// let theBlur = false;
-
-// const blurEffect = document.querySelector('.effect_blur')
-// let myVar =  true;
-
-// profilButton.addEventListener('click', ()=>{
-//     menuProfil.classList.toggle('menu_toggle');
-// });
-// const profileButton = document.getElementById('profil_button');
-
-// const headerProfile = document.getElementById('header_profile');
-
-//  const menuProfile = document.getElementById('menu_profil')
-
-// console.log(profileButton)
-
-// profileButton.addEventListener('click', ()=>{
-//     menuProfile.classList.toggle('menu_toggle');
-// });
 const searchBar = document.querySelector('.search_bar_input');
 const body = document.body;
 let homeContainer = document.querySelector('.center_container');
 
-let blurEl = document.createElement('span');
-
 const seeMoreBtn = document.getElementById('see_more_center_responsive');
 const favoriteContainer = document.getElementById('responsive_favoris');
 const shawProfileBtn = document.querySelector('.me');
-
+const btnMessageArea = document.querySelector('#btn_toggle_message_box');
+const messageArea = document.querySelector('.sms_container');
+let blurEl = document.createElement('span');
 
 const profilesArray = [
     {
@@ -149,14 +123,16 @@ const profilesArray = [
   ];
 
   
-
-
-console.log(shawProfileBtn)
+console.log(btnMessageArea)
 
 shawProfileBtn.addEventListener('click', ()=>{
-  console.log("clicked")
-
+  // console.log("clicked")
   shawProfileBtn.classList.toggle('shaw_profile')
+})
+btnMessageArea.addEventListener('click', ()=>{
+  console.log("clicked")
+  btnMessageArea.classList.toggle('switch_btn_icon')
+  messageArea.classList.toggle('shaw_message_container')
 })
 
 try {
@@ -188,9 +164,11 @@ searchBar.addEventListener('blur', ()=>{
 
 window.addEventListener('scroll', ()=>{
     const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
-
-   if ( (scrollHeight - (scrollTop + clientHeight) ) <= 5 ){
+// console.log(scrollTop, scrollHeight, clientHeight)
+// console.log('egale to =' + (scrollTop + clientHeight))
+   if ( (scrollHeight - (scrollTop + clientHeight) ) <= 20 ){
     
+    // console.log('touchee')
     addProfiles(2);
 
    }
@@ -204,8 +182,6 @@ window.addEventListener('scroll', ()=>{
     }
    }
    catch (error) {
-
-    
     
     }
     
@@ -284,37 +260,4 @@ const dynamicSearch = () => {
 
 
 
-
-
-
-
-
-
-// console.log(window)
-// window.addEventListener('scroll', () =>{
-
-//     if( screenTop > 200){
-//             headerBar.style.display = "block";
-//             // myVar ==false;
-//     }
-//     else
-//         headerBar.style.display = "none";
-//         myVar =  true;
-  
-// });
-// if( myVar){
-//     headerBar.style.display ="none";
-// }
-
-
-// theInput.onfocus = function(){
-//     blurEffect.classList.toggle('blur_appear')
-//     theBlur == true;
-
-//     if(theBlur == true){
-//         header.addEventListener('click', () =>{
-//             blurEffect.classList.toggle('blur_none')
-//         })
-//     }
-// }
 
